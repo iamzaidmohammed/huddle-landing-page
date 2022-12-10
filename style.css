@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@500,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:wght@500,700,900&display=swap");
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Violet);
+  background-image: url(./images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  padding: 40px 20px;
+  color: white;
+}
+
+header {
+  padding-bottom: 30px;
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  padding-top: 50px;
+}
+
+p {
+  font-size: 17.5px;
+  padding: 30px 0 20px 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  padding: 15px 90px;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--SoftMagenta);
+  border: 2px solid white;
+  transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background-color: var(--SoftMagenta);
+  border: 2px solid var(--SoftMagenta);
+  color: white;
+}
+
+footer {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+i {
+  transition: all 0.3s ease-out;
+}
+
+.circle:hover {
+  border-color: var(--SoftMagenta);
+}
+
+.circle:hover > i {
+  color: var(--SoftMagenta);
+}
+
+@media (min-width: 950px) {
+  body {
+    background-image: url(./images/bg-desktop.svg);
+  }
+  .logo {
+    width: unset;
+  }
+
+  main {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .img {
+    width: 50%;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .content {
+    width: 50%;
+    text-align: start;
+  }
+}
+
+@media (min-width: 1180px) {
+  main {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  footer {
+    justify-content: end;
+    padding: 10px 0;
+  }
+}
